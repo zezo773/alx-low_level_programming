@@ -3,8 +3,7 @@
 /**
  * main - print out the numbers from 0 to 9 with commas and spaces
  * Return: 0
- * Hasan Ragab
- */
+*/
 int main(void)
 {
 	int num;

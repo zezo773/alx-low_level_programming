@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: print 0, 1, - 9
+ * Description: print all numbers from 0 to 9 with commas and spaces
  *
  * Return: Always 0 (Success)
 */

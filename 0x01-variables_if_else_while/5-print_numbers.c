@@ -19,5 +19,5 @@ int main(void)
 	}
 	printd("\n");
 
-	return (0;
+	return (0);
 }

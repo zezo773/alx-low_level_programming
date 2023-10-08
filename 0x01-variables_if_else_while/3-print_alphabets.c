@@ -5,7 +5,7 @@
  *
  * Description: print alphabet in lowercase then in uppercase
  *
- * Return: always 0 (success)
+ * Return: Always 0 (success)
 */
 
 int main(void)
@@ -13,7 +13,7 @@ int main(void)
 	char ch = 'a';
 	char CH = 'A';
 
-	/*prints a -z*/
+	/*prints a - z*/
 	while (ch <= 'z')
 	{
 		putchar(ch);
@@ -21,11 +21,13 @@ int main(void)
 	}
 
 	/*print A - Z*/
-	while (CH <= 'z')
+	while (CH <= 'Z')
 	{
-		putchar(CH);
+		putchar('CH');
 		CH++;
 	}
 	putchar('\n');
+
 	return (0);
+
 }

@@ -7,7 +7,7 @@
  * @c: checks input of function
  *
  * Return: returns 1 if `c` is lowercase
- * otgerwise always 0 (Success)
+ * otherwise always 0 (Success)
  *
  */
 

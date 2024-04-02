@@ -3,6 +3,7 @@
 /**
  * print_triangle - A Entry Point
  *
+ * @size: Is A Parametter
  * a function that prints a triangle, followed by a new line.
  *
  * Return: Void

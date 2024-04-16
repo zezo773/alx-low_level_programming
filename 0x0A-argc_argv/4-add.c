@@ -9,7 +9,7 @@
  * @argc: The First Parametter
  * @argv: The Second Parametter
  *
- * returm: 0
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -30,5 +30,5 @@ int main(int argc, char *argv[])
 		sum += atoi(argv[argc]);
 	}
 	printf("%d\n", sum);
-	return (0);	
+	return (0);
 }

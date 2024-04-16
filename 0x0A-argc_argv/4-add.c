@@ -1,6 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - The Entry Point
+ *
+ * a program that adds positive numbers.
+ *
+ * @argc: The First Parametter
+ * @argv: The Second Parametter
+ *
+ * returm: 0
+ */
+
 int main(int argc, char *argv[])
 {
 	int sum = 0;

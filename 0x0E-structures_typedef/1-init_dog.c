@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include "dog.h"
 
 /**
@@ -6,20 +5,17 @@
  *
  * a function that initialize a variable
  *
- * @d: First Parametter
- * @name: Second Parametter
- * @age: Third Parametter
- * @owner: Fourth Parametter
+ * @d: First member
+ * @name: Second member
+ * @age: Third member
+ * @owner: Fourth member
  *
- * Return: Nothing
+ * Return: void
  */
 
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d != NULL)
-	{
-		d->name = name;
-		d->age = age;
-		d->owner = owner;
-	}
+	(*d).name = name;
+	d->age = age;
+	d->owner = owner;
 }

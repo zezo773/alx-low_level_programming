@@ -8,7 +8,6 @@
   * Return: a newly alloctaed
   * space in memory which contains a copy of the string passed.
   */
-
 char *_strdup(char *str)
 {
 	char *new_str;
@@ -18,14 +17,16 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	str_len = sizeof(str) - 1;
+
+	for (str_len = 0; str[str_len] != '\0'; str_len++)
+		continue;
+
 	new_str = malloc(sizeof(char) * (str_len + 1));
 
 	if (new_str == NULL)
 	{
 		return (NULL);
 	}
-
 	x = 0;
 	while (x < str_len)
 	{
@@ -34,4 +35,5 @@ char *_strdup(char *str)
 	}
 	new_str[str_len] = '\0';
 	return (new_str);
+
 }

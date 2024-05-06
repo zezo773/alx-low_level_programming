@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * alloc_grid - function that loop to make grid
  * @width: width input variable.
@@ -13,7 +15,7 @@ int **alloc_grid(int width, int height)
 	if (height <= 0 || width <= 0)
 		return (NULL);
 
-	grid = malloc(height * sizeof(int));
+	grid = malloc(height * sizeof(int *));
 	if (grid == NULL)
 		return (NULL);
 	row = 0;

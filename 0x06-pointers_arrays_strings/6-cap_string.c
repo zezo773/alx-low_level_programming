@@ -1,34 +1,48 @@
 #include "main.h"
 
+int check(char c);
 /**
- * cap_string - capitalizes everey word of a string
- * @s: string to modify
- *
- * Return: the resulting string
+ * cap_string - uppercase the first letter of all words in the stirng
+ * @s: pointer for the string
+ * Return: the string
  */
 char *cap_string(char *s)
 {
-	int i, j;
+	int i = 0;
 
-	char spe[13] = {' ', '\t', '\n', ',', ';', '.',
-		'!', '?', '"', '(', ')', '{', '}'};
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] -= 32;
+	i++;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (s[i] != '\0')
 	{
-		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+		if ((s[i] >= 'a' && s[i] <= 'z') && check(s[i - 1]))
 			s[i] -= 32;
 
-		for (j = 0; j < 13; j++)
-		{
-			if (s[i] == spe[j])
-			{
-				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
-				{
-					s[i + 1] -= 32;
-				}
-			}
-		}
+		i++;
 	}
 
 	return (s);
+}
+
+/**
+ * check - the main pointer
+ *
+ * @c: the parameter
+ *
+ * Return: inger value
+ */
+int check(char c)
+{
+	char separator[] = " \t,;.!?\"(){}";
+
+	int i = 0;
+	while (separator[i] != '\0')
+	{
+		if (c == separator[i])
+			return (1);
+		i++;
+	}
+
+	return (0);
 }

@@ -1,26 +1,23 @@
 #include "main.h"
 
 /**
- * _strcmp - The Entry Point
+ * _strcmp - the entry point
  *
- * a function that compares two strings.
+ * @s1: the first parameter
+ * @s2: the second parameter
  *
- * @s1: The First Parametter
- * @s2: The Second Parametter
- *
- * Return: Char
+ * Return: intger value
  */
-
 int _strcmp(char *s1, char *s2)
 {
-	while (*s1 == *s2)
+	int i = 0;
+
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		if (*s1 == '\0')
-		{
-			return (0);
-		}
-		s1++;
-		s2++;
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
-	return (*s1 - *s2);
+
+	return (s1[i] - s2[i]);
 }

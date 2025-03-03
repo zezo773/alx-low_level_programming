@@ -1,24 +1,19 @@
 #include "main.h"
 
 /**
- * _memcpy - The Entry Point
+ * _memcpy - the entry point
  *
- * a function that copies memory area.
+ * @dest: the destenation parameter
+ * @src: the src character
+ * @n: the number of bytes
  *
- * @dest: First Parametter
- * @src: Second Parametter
- * @n: Third Parametter
- *
- * Return: Char
+ * Return: the pointer of character
  */
-
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int i;
 
 	for (i = 0; i < n; i++)
-	{
 		dest[i] = src[i];
-	}
 	return (dest);
 }

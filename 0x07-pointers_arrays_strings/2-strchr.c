@@ -1,30 +1,23 @@
 #include "main.h"
 
 /**
- * _strchr - The Entry Point
+ * _strchr - the entry point
  *
- * a function that locates a character in a string.
+ * @s: first parameter
+ * @c: second parameter
  *
- * @s: The First parametter
- * @c: The Second Parametter
- *
- * Return: Char
+ * Return: character of pointer
  */
-
 char *_strchr(char *s, char c)
 {
-		int a;
+	while (*s)
+	{
+		if (*s == c)
+			return (s);
+		s++;
+	}
+	if (c == '\0')
+		return (s);
 
-		while (1)
-		{
-			a = *s++;
-			if (a == c)
-			{
-				return (s - 1);
-			}
-			if (a == 0)
-			{
-				return (NULL);
-			}
-		}
+	return ('\0');
 }

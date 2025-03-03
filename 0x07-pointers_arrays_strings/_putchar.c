@@ -2,12 +2,11 @@
 
 /**
  * _putchar - writes the character c to stdout
- * @c; the character to print
+ * @c: the character to print
  *
- * Return: On Success 1.
- * On error, -1 is returned, and erro ste appropriately.
+ * Return: On success 1.
+ * on error, -1 is returned, and errno is set approoirately
  */
-
 int _putchar(char c)
 {
 	return (write(1, &c, 1));

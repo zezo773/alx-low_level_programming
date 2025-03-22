@@ -1,34 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
-/**
- * main - The Entry Point
- *
- * a program that adds positive numbers.
- *
- * @argc: The First Parametter
- * @argv: The Second Parametter
- *
- * Return: 0
- */
+/** */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int sum = 0;
-	char *c;
+	int i, j, num = 0;
 
-	while (--argc)
+	if (argc == 1)
 	{
-		for (c = argv[argc]; *c; c++)
+		printf("0\n");
+		return (0);
+	}
+
+	for (i = 1; i < argc; i++)
+	{
+		for(j = 0; argv[i][j] != '\0'; j++)
 		{
-			if (*c < '0' || *c > '9')
+			if (!isdigit(argv[i][j]))
 			{
 				printf("Error\n");
 				return (1);
 			}
 		}
-		sum += atoi(argv[argc]);
+		num += atoi(argv[i]);
 	}
-	printf("%d\n", sum);
+
+	printf("%d\n", num);
+
 	return (0);
 }

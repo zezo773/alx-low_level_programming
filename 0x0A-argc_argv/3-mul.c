@@ -1,30 +1,30 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main -0 The Entry Point
+ * main - the entry point
  *
- * a program that multiplies two numbers.
+ * @argc: the argument coutn
+ * @argv: the argument value
  *
- * @argc: The First Parametter
- * @argv: The Second Parametter
- *
- * Return: 0
+ * Return: 0 if success and 1 if not
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int sum;
+	int num1, num2, result;
 
-	if (argc == 3)
-	{
-		sum = atoi(argv[1]) * atoi(argv[2]);
-		printf("%d\n", sum);
-	}
-	else
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[2]);
+	result = num1 * num2;
+
+	printf("%d\n", result);
+
 	return (0);
+	
 }

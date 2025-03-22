@@ -1,24 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - The Entry Point
+ * main - the entry point
  *
- * a program that prints all arguments it receives.
- *
- * @argc: The Firs Parametter
- * @argv: The Second Parametter
+ * @argc: the argument coun
+ * @argv: the argumet values
  *
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int n;
+	int i;
 
-	for (n = 0; n < argc; n++)
-	{
-		printf("%s\n", argv[n]);
-	}
-	(void) argc;
+	for (i = 0; i < argc; i++)
+		printf("%s\n", argv[i]);
+
 	return (0);
 }

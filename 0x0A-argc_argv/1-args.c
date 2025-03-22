@@ -1,19 +1,19 @@
 #include <stdio.h>
 
-/**
- * main - The entry point
+/** 
+ * maint - the entry point
  *
- * a program that prints the number of arguments passed into it.
+ * @argc: arrgumen count
+ * @argv: argument vector
  *
- * @argc: The First Parametter
- * @argv: The Second Parametter
- *
- * Return: 0
+ * Return: Always 0 (success)
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	printf("%d\n", argc - 1);
-	(void) argv;
-	return (0);
+	(void)argv;
+
+	printf("%d\n", (argc - 1));
+
+	return (0);	
 }

@@ -1,19 +1,21 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
- * free_dog - ...
- * @d: ...
+ * free_dog - the entry point
  *
- * Return: ...
+ * @d: the argument
+ *
+ * Return: void value
  */
-
 void free_dog(dog_t *d)
 {
-	if (d != NULL)
-	{
-		free(d->owner);
+	if (!d)
+		return;
+
+	if (d->name)
 		free(d->name);
-		free(d);
-	}
+	if (d->owner)
+		free(d->owner);
+	free(d);
 }

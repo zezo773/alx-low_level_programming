@@ -1,25 +1,20 @@
-/*
- * File: 1-list_len.c
- * Author : Solomon Kassa
- */
-
 #include "lists.h"
-#include <stdio.h>
 
 /**
  * list_len - returns then number of elements in a list.
- * @s: singly linked list.
+ * @h: singly linked list.
+ *
  * Return: number of elements in the list.
  */
-
-size_t list_len(const list_t *s)
+size_t list_len(const list_t *h)
 {
-	size_t nodes;
+	size_t count = 0;
 
-	for (nodes = 0 ; s != NULL ; nodes++)
+	while (h)
 	{
-		s = s->next;
+		h = h->next;
+		count++;
 	}
 
-	return (nodes);
+	return (count);
 }

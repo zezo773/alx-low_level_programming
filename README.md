@@ -32,7 +32,7 @@ All of the following folders are projects done during the studies:
 | [`0x13-more_singly_linked_lists`](https://github.com/zezo773/alx-low_level_programming/tree/master/0x13-more_singly_linked_lists) | It aims to learn about singly linked lists in **C language** |
 | [`0x14-bit_manipulation`](https://github.com/zezo773/alx-low_level_programming/tree/master/0x14-bit_manipulation) | It aims to learn about how to manipulate bits and use bitwise operators in **C language** |
 | [`0x15-file_io`](https://github.com/zezo773/alx-low_level_programming/tree/master/0x15-file_io) | It aims to learn about how to handle files (open, close, read and write), file descriptors, system calls and file permissions in **C language** |
-<!-- | [`0x17-doubly_linked_lists`](https://github.com/zezo773/alx-low_level_programming0x17-doubly_linked_lists) | It aims to learn about doubly linked list in **C language** | -->
+| [`0x17-doubly_linked_lists`](https://github.com/zezo773/alx-low_level_programming/tree/master/0x17-doubly_linked_lists) | It aims to learn about doubly linked list in **C language** |
 <!-- | [`0x18-dynamic_libraries`](https://github.com/zezo773/alx-low_level_programming0x18-dynamic_libraries) | It aims to learn about dynamic and shared libraries in **C language** | -->
 <!-- | [`0x19-stacks_queues_lifo_fifo`](https://github.com/jorgezafra94/monty) | Submodule of **monty**, an interpreter of Monty ByteCode files written with **C language** | -->
 <!-- | [`0x1A-hash_tables`](https://github.com/zezo773/alx-low_level_programming0x1A-hash_tables) | It aims to learn how to implement Hash Tables with **C language** | -->

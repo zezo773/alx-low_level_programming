@@ -35,7 +35,7 @@ All of the following folders are projects done during the studies:
 | [`0x17-doubly_linked_lists`](https://github.com/zezo773/alx-low_level_programming/tree/master/0x17-doubly_linked_lists) | It aims to learn about doubly linked list in **C language** |
 | [`0x18-dynamic_libraries`](https://github.com/zezo773/alx-low_level_programming/tree/master/0x18-dynamic_libraries) | It aims to learn about dynamic and shared libraries in **C language** |
 <!-- | [`0x19-stacks_queues_lifo_fifo`](https://github.com/jorgezafra94/monty) | Submodule of **monty**, an interpreter of Monty ByteCode files written with **C language** | -->
-<!-- | [`0x1A-hash_tables`](https://github.com/zezo773/alx-low_level_programming0x1A-hash_tables) | It aims to learn how to implement Hash Tables with **C language** | -->
+| [`0x1A-hash_tables`](https://github.com/zezo773/alx-low_level_programming/tree/master/0x1A-hash_tables) | It aims to learn how to implement Hash Tables with **C language** |
 <!-- | [`0x1B-sorting_algorithms`](https://github.com/zezo773/alx-low_level_programming0x1B-sorting_algorithms) | It aims to learn about sorting algorithms (bubble sort, insertion sort, selection sort, quick sort and so on) and Big O Notation in **C language** | -->
 <!-- | [`0x1C-makefiles`](https://github.com/zezo773/alx-low_level_programming0x1C-makefiles) | It aims to learn what are makefiles, when, why and how to use them (with variables, explicit and implicit rules) | -->
 <!-- | [`0x1D-binary_trees`](https://github.com/zezo773/alx-low_level_programming0x1D-binary_trees) | It aims to learn about what is a binary tree, the different traversal methods to go through a binary tree and the different types of binary trees (complete, full, perfect and balanced) | -->

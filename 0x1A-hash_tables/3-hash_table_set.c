@@ -1,54 +1,86 @@
-
 #include "hash_tables.h"
+hash_node_t *create(const char *key, const char *value);
 
 /**
- * hash_table_set - Add or update an element in a hash table.
- * @ht: A pointer to the hash table.
- * @key: The key to add - cannot be an empty string.
- * @value: The value associated with key.
+ * hash_table_set - adds an element to the hash table
+ * @ht: the hash table
+ * @key: the key
+ * @value: the value
  *
- * Return: Upon failure - 0.
- *         Otherwise - 1.
+ * Return: 0 in failed 1 in succeed
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new;
-	char *value_copy;
-	unsigned long int index, i;
+	unsigned long int index;
+	hash_node_t *current;
 
-	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
-		return (0);
-
-	value_copy = strdup(value);
-	if (value_copy == NULL)
+	if (!ht || !key || strlen(key) == 0 || !value)
 		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
-	for (i = index; ht->array[i]; i++)
+
+	current = ht->array[index];
+
+	if (current == NULL)
 	{
-		if (strcmp(ht->array[i]->key, key) == 0)
+		hash_node_t *item = create(key, value);
+		if (!item)
+			return (0);
+		ht->array[index] = item;
+		return (1);
+	}
+	else
+	{
+		if (strcmp(current->key, key) == 0)
 		{
-			free(ht->array[i]->value);
-			ht->array[i]->value = value_copy;
+			free(current->value);
+			current->value = strdup(value);
+			if (!current->value)
+				return (0);
+			return (1);
+		}
+		else
+		{
+			hash_node_t *item = create(key, value);
+			if (!item)
+				return (0);
+			item->next = ht->array[index];
+			ht->array[index] = item;
 			return (1);
 		}
 	}
+	return (0);
 
-	new = malloc(sizeof(hash_node_t));
-	if (new == NULL)
-	{
-		free(value_copy);
-		return (0);
-	}
-	new->key = strdup(key);
-	if (new->key == NULL)
-	{
-		free(new);
-		return (0);
-	}
-	new->value = value_copy;
-	new->next = ht->array[index];
-	ht->array[index] = new;
+}
 
-	return (1);
+
+/**
+ * create - the main function
+ *
+ * @key: the key
+ * @value: the value
+ *
+ * Return: the node of item
+ */
+hash_node_t *create(const char *key, const char *value)
+{
+	hash_node_t *item = malloc(sizeof(hash_node_t));
+	if (!item)
+		return (NULL);
+	item->key = strdup(key);
+	if (!(item->key))
+	{
+		free(item);
+		return (NULL);
+	}
+	item->value = strdup(value);
+	if (!(item->value))
+	{
+		free(item->key);
+		free(item);
+		return (NULL);
+	}
+	item->next = NULL;
+
+	return (item);
 }

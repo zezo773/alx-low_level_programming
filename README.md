@@ -1,5 +1,7 @@
 # Low-level programming & Algorithm
 
+![Low-level programming & Algorithm](https://sdmntprwestcentralus.oaiusercontent.com/files/00000000-3d48-61fb-bbb3-005e24bab8ce/raw?se=2025-09-15T10%3A33%3A31Z&sp=r&sv=2024-08-04&sr=b&scid=8e408ef2-faf4-5f45-a8c6-501c4aeb1d2f&skoid=f28c0102-4d9d-4950-baf0-4a8e5f6cf9d4&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-15T07%3A16%3A28Z&ske=2025-09-16T07%3A16%3A28Z&sks=b&skv=2024-08-04&sig=PJygz9dCrA%2BZqLe2CdQzzdTOL6RdBp2RkUYb8kQ3rxM%3D)
+
 ## Technologies
 * Scripts written in Bash 4.3.11(1)
 * C files are compiled using `gcc 4.8.4`

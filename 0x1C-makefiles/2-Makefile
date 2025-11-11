@@ -1,9 +1,10 @@
-CC = gcc
-SRC = main.c school.c
-OBJ = $(SRC:.c=.o)
-NAME = school
+CC := gcc
+SRC := $(wildcard *.c)
+OBJ := $(SRC:.c=.o)
+NAME := school
 
-all: $(OBJ)
-	@echo "Compiling..."
-	@$(CC) $(OBJ) -o $(NAME)
-	@echo "Done."
+all: $(NAME)
+.PHONY: all $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $@
